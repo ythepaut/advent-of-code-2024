@@ -6,3 +6,5 @@ inputs/*
 !inputs/.gitkeep
 
 node_modules/
+
+src/solutions/day0
