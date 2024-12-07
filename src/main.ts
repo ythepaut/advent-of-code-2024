@@ -69,10 +69,15 @@ async function main(): Promise<void> {
         process.exit(1);
     }
 
+    let start = performance.now();
     const result1 = solutionScript.part1(input.toString());
-    console.info(`Day ${args.day} - Part 1 : ${result1}`);
+    let end = performance.now();
+    console.info(`Day ${args.day} - Part 1 : ${result1} \t(${Math.floor(end - start)}ms)`);
+
+    start = performance.now();
     const result2 = solutionScript.part2(input.toString());
-    console.info(`Day ${args.day} - Part 2 : ${result2}`);
+    end = performance.now();
+    console.info(`Day ${args.day} - Part 2 : ${result2} \t(${Math.floor(end - start)}ms)`);
 }
 
 main().then();
